@@ -1061,8 +1061,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: -319, y: -252}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -266, y: -252}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634443727
 MonoBehaviour:
@@ -1203,8 +1203,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: -319, y: -252}
+  m_AnchoredPosition: {x: -3, y: -3}
+  m_SizeDelta: {x: -261, y: -240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854804486
 MonoBehaviour:
@@ -2133,7 +2133,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -349}
+  m_AnchoredPosition: {x: 0, y: -322}
   m_SizeDelta: {x: 13955, y: 4200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308956375
@@ -2475,7 +2475,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1024, y: 768}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2854,12 +2854,30 @@ MonoBehaviour:
   StoreIconPrefab: {fileID: 11404104, guid: 8cf9c54d1a066c047a670c996165d4e2, type: 2}
   ButtonSprites:
   - {fileID: 21300000, guid: d719efce50230d642abf8e6b3cf3210f, type: 3}
+  - {fileID: 21300000, guid: a4a3576083cde9b489fee0457577a9e2, type: 3}
+  - {fileID: 21300000, guid: eeefa58dfe97db046bd07f0da656844f, type: 3}
+  - {fileID: 21300000, guid: 5554beb8db35e1f42b6bfc220f24df93, type: 3}
   - {fileID: 21300000, guid: 9b6b73e7313a0e440826f871ba09d696, type: 3}
   - {fileID: 21300000, guid: 61f9c7cb247d48a488cc3ad1c2fe1e02, type: 3}
+  - {fileID: 21300000, guid: 0766eb06454d7b24789e4c8ddecf79da, type: 3}
+  - {fileID: 21300000, guid: 042507e5b39ede6408e364bb23b7a08e, type: 3}
+  - {fileID: 21300000, guid: 5a734e3b22ba0014f97b44c683ec2670, type: 3}
   - {fileID: 21300000, guid: 5b523d13a0688524f86b7289eda53767, type: 3}
-  - {fileID: 21300000, guid: 38cc7077f851aa84e8c91b531017f2b5, type: 3}
+  - {fileID: 21300000, guid: e3077f7161008904985b874aaf0e6608, type: 3}
+  - {fileID: 21300000, guid: ebc789cd91b9ad24183a1483e01bd50e, type: 3}
+  - {fileID: 21300000, guid: e922ae7bbd3121e44a39da35facb3b61, type: 3}
+  - {fileID: 21300000, guid: 1ed31ac848f298e499ab3e01aead46da, type: 3}
+  - {fileID: 21300000, guid: 8f8425b624656024fbfc021ea5fb4fc9, type: 3}
+  - {fileID: 21300000, guid: 31bc934f2c03b1042ac3cd5935bb87d5, type: 3}
+  - {fileID: 21300000, guid: 7c14eae9e7864a645b8679882d9f8000, type: 3}
+  - {fileID: 21300000, guid: 5f62712499ca9b042991ec272635ecc5, type: 3}
+  - {fileID: 21300000, guid: 3936903200aa33143a3e4e4c7a497518, type: 3}
+  - {fileID: 21300000, guid: 1ee6d964c7820da4e86041d79d7036b4, type: 3}
   - {fileID: 21300000, guid: e750b7bb5713fc748a7001e3cb837f59, type: 3}
+  - {fileID: 21300000, guid: f9d110fc7fa04004e9ba0966f12af935, type: 3}
   - {fileID: 21300000, guid: 4304f759770a98a4d90bb10b901ec95d, type: 3}
+  - {fileID: 21300000, guid: 38cc7077f851aa84e8c91b531017f2b5, type: 3}
+  - {fileID: 21300000, guid: 6b2616487c939104eab9ec81183afb44, type: 3}
   StoreItemsIndex: 
 --- !u!1 &1732937517
 GameObject:
@@ -2907,7 +2925,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -197, y: -115}
+  m_SizeDelta: {x: -43, y: -72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1732937519
 MonoBehaviour:

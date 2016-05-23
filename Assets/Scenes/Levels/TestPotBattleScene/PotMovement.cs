@@ -15,7 +15,7 @@ public class PotMovement : MonoBehaviour {
     private Vector3 initRot;
     [SerializeField] Vector3 endPos = new Vector3(0,1,0);
     [SerializeField] float moveSpeed = 13;
-    [SerializeField] bool potMove;
+    public bool potMove;
     [SerializeField] bool potDown;
 
     // Shadow Variables.
@@ -30,6 +30,7 @@ public class PotMovement : MonoBehaviour {
     public SpriteRenderer playerRenderer;
     public SpriteRenderer enemyRenderer;
     public SpriteRenderer playerChildRenderer;
+    public SpriteRenderer enemyChildRenderer;
 
     private Animator animator; // stores animator.
 
@@ -86,6 +87,18 @@ public class PotMovement : MonoBehaviour {
 
                 }
             }
+            foreach(Transform child in enemyRock.transform)
+            {
+                try
+                {
+                    enemyChildRenderer = child.GetComponent<SpriteRenderer>();
+                    enemyChildRenderer.color = Color.Lerp(enemyRock.GetComponent<SpriteRenderer>().color, Color.black, shadowAlphaChangeSpeed * 0.007f);
+                }
+                catch
+                {
+
+                }
+            }
             potShadow.transform.localScale = shadowScale;
             if (pot.transform.position.y <= endPos.y)
             {
@@ -110,7 +123,19 @@ public class PotMovement : MonoBehaviour {
                 try
                 {
                     playerChildRenderer = child.GetComponent<SpriteRenderer>();
-                    playerChildRenderer.color = Color.Lerp(enemyRock.GetComponent<SpriteRenderer>().color, Color.black, shadowAlphaChangeSpeed * 0.007f);
+                    playerChildRenderer.color = Color.Lerp(playerRock.GetComponent<SpriteRenderer>().color, rockStartColour, shadowAlphaChangeSpeed * 0.007f);
+                }
+                catch
+                {
+
+                }
+            }
+            foreach(Transform child in enemyRock.transform)
+            {
+                try
+                {
+                    enemyChildRenderer = child.GetComponent<SpriteRenderer>();
+                    enemyChildRenderer.color = Color.Lerp(enemyRock.GetComponent<SpriteRenderer>().color, rockStartColour, shadowAlphaChangeSpeed * 0.007f);
                 }
                 catch
                 {
