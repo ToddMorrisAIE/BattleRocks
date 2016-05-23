@@ -16,4 +16,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuInventory.unity
   - enabled: 1
-    path: Assets/Scenes/Levels/Battle Scene_Level1.unity
+    path: Assets/Scenes/Level_Selection.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/BattleScene_Level1.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/BattleScene_Level2.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/BattleScene_Level3.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/BattleScene_Level4.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/BattleScene_Level5.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/BattleScene_Level6.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/BattleScene_Level7.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/BattleScene_Level8.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/BattleScene_Level9.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/BattleScene_Level10.unity

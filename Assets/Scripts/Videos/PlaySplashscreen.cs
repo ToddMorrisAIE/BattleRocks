@@ -23,7 +23,7 @@ public class PlaySplashscreen : MonoBehaviour {
 	void Update () {
         if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) == true || SplashScreenVideo.isPlaying == false)
         {
-            GameObject.Find("FadeScreen").GetComponent<SceneFadeInAndOut>().LoadNewScene("MainMenu");
+            GameObject.Find("FadeScreen").GetComponent<SceneFadeInAndOut>().LoadNewScene("MenuMain");
         }
 	
 	}

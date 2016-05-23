@@ -31,28 +31,59 @@ public class _MusicManager : MonoBehaviour {
     public AudioClip[] SoundFiles;
     private AudioSource MasterAudioStream;
     private bool FadeOut;
-    private float MusicVolume;
+    //private float MusicVolume;
+    public SoundBite SoundLoader;
+    public Stack<GameObject> LoadedSounds;
 
+    // This Enum lists the name of all the Music effects in the Library. As new ones added to the engine, must be addd here in same order
     public enum TypesOfMusic
     {
-        GENERAL_BACKGROUND = 0,
-        BATTLE_SCENE = 1,
-        CUSTOM = 2
+        ARIETTA_WHIMSICAL = 0,
+        CARTOON_STYLE_BACKGROUND = 1,
+        CAT_AND_MOUSE_PLAYFUL = 2,
+        MYSTICAL_ROCKY = 3,
+        MAIN_MENU_STYLE_PLAYFUL = 4,
+        GLORY_UPBEAT = 5,
+        BACKGROUND_STYLE_ADVENTUROUS = 6,
+        BACKGROUND_STYLE_WHIMSICAL_PLAYFUL = 7
     }
 
-    public enum TypesOfSounds
+    // This Enum lists the name of all the sound effects in the Library. As new ones added to the engine, must be addd here in same order
+    public enum TypesOfSounds  
     {
-        BUTTON_CLICK = 0,
-        BATTLE_WIN = 1,
-        BATTLE_LOSE = 2
+        CUTE_GIGGLE = 0,
+        CARTOON_POPUP = 1,
+        WINDOW_TAPPING = 2,
+        LIGHTSABER_SWISH = 3,
+        EEEEE = 4,
+        AHHHHH = 5,
+        OH_OH = 6,
+        BUBBLES = 7,
+        BLOCK_THUD = 8,
+        SWORD_MISS = 9,
+        BATTLE_HORN = 10,
+        SWORD_DRAW = 11,
+        CANON = 12,
+        EVIL_LAUGH = 13,
+        WILHELM_SCREAM = 14,
+        BURP = 15,
+        GO = 16,
+        EXPLOSION = 17,
+        GAME_WHISTLE = 18,
+        FIGHT = 19,
+        SUCCESS_TRUMPET = 20,
+        DREAM_HARP = 21,
+        SLAP_HIT = 22,
+        HORN_BEEP_BEEP = 23,
+        WAR_DRUMS = 24
     }
 
-    private TypesOfMusic AudioTransition;
+    private TypesOfMusic AudioTransition; // Keeps track of the transitioning audio music while it is being faded and changed
 
     TypesOfMusic MusicMaster;
-    //TypesOfSounds SoundMaster;
 
-    Dictionary<int, AudioClip> MusicLookUp = new Dictionary<int, AudioClip>();
+    // Dictionary Lookups for the Music and Sound library to make them eaiser to use from code
+    Dictionary<int, AudioClip> MusicLookUp = new Dictionary<int, AudioClip>();  
     Dictionary<int, AudioClip> SoundLookUp = new Dictionary<int, AudioClip>();
 
     void Awake()
@@ -78,26 +109,28 @@ public class _MusicManager : MonoBehaviour {
     {
         for (int i = 0; i < MusicFiles.Length; i++)
         {
-            MusicLookUp.Add(i, MusicFiles[i]);
+            MusicLookUp.Add(i, MusicFiles[i]);  // Adds the muic files to the Dictionary to make playing easier
         }
 
         for (int i = 0; i < SoundFiles.Length; i++)
         {
-            SoundLookUp.Add(i, SoundFiles[i]);
+            SoundLookUp.Add(i, SoundFiles[i]); // Adds the sound files to the Dictionary to make playing easier
         }
 
 
         MasterAudioStream = GetComponent<AudioSource>();
-        MusicMaster = TypesOfMusic.GENERAL_BACKGROUND;
+        MusicMaster = TypesOfMusic.MAIN_MENU_STYLE_PLAYFUL;
         MasterAudioStream.clip = MusicLookUp[(int)MusicMaster];
-        MasterAudioStream.Play();
+        MasterAudioStream.Play();           // Begins playing the main music on the master music channel
+
+        LoadedSounds = new Stack<GameObject>();
         
 	}
 
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+    void Update()
     {
-        if (FadeOut == true && MusicMaster != AudioTransition)
+        if (FadeOut == true && MusicMaster != AudioTransition)  // Fades the music out and fades the new music in
         {
             MusicFade();
         }
@@ -108,10 +141,20 @@ public class _MusicManager : MonoBehaviour {
                 MusicGrow();
             }
         }
-	    
-	}
 
-    public void ChangeMusic(TypesOfMusic NewMusic)
+        if (LoadedSounds.Count > 0) // Removes the sound objects from the scene once they are finished playing (only half works)
+        {
+
+            if (LoadedSounds.Peek().GetComponent<SoundBite>().SoundPlaying == false)
+            {
+                GameObject SoundToDelete = LoadedSounds.Pop();
+                DestroyObject(SoundToDelete);
+            }
+
+        }
+    }
+
+    public void ChangeMusic(TypesOfMusic NewMusic)  // Used to change the Music that is playing
     {
         if (MusicMaster == NewMusic)
         {
@@ -125,7 +168,7 @@ public class _MusicManager : MonoBehaviour {
 
     }
 
-    void MusicFade()
+    void MusicFade() // The Function that actually fades the current music track
     {
         if (MasterAudioStream.volume >= 0.0f)
         {
@@ -144,7 +187,7 @@ public class _MusicManager : MonoBehaviour {
     }
 
 
-    void MusicGrow()
+    void MusicGrow()  // The function that makes the new music track return to normal volume
     {
         if (MasterAudioStream.clip != MusicLookUp[(int)MusicMaster])
         {
@@ -169,5 +212,15 @@ public class _MusicManager : MonoBehaviour {
             }
         }
 
+    }
+
+    public void PlaySoundEffect(TypesOfSounds SoundToPlay) // This function simply takes a sound file type from the dictionary and plays it 
+    {
+        GameObject Temp = Instantiate(SoundLoader.gameObject, transform.position, transform.rotation) as GameObject;
+        Temp.transform.SetParent(transform);
+
+        SoundBite SbTemp = Temp.GetComponent<SoundBite>();
+        SbTemp.Init(SoundLookUp[(int)SoundToPlay]);
+        LoadedSounds.Push(Temp);
     }
 }

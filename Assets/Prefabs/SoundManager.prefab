@@ -80,7 +80,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -102,7 +102,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &11430278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,9 +115,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MusicFiles:
-  - {fileID: 8300000, guid: d4c0037a73cf86f43bbf2f5fc8bbc1e9, type: 3}
+  - {fileID: 8300000, guid: d3d6670094b02e347b0232d4481f8b9b, type: 3}
   - {fileID: 8300000, guid: eecd51becea3c684fa2fd4c36d5a3d41, type: 3}
-  SoundFiles: []
+  - {fileID: 8300000, guid: 035c66722adfebb4cb5a56fcd6e29677, type: 3}
+  - {fileID: 8300000, guid: cd877b980a528014f88cacbd52a2546a, type: 3}
+  - {fileID: 8300000, guid: d4c0037a73cf86f43bbf2f5fc8bbc1e9, type: 3}
+  - {fileID: 8300000, guid: a869e8f41e70fec4099d3b0824a56ca0, type: 3}
+  - {fileID: 8300000, guid: c26136b2b87a63942a2a660b4f0fb843, type: 3}
+  - {fileID: 8300000, guid: f62d40b71b636f64fab9243fa56a95c1, type: 3}
+  SoundFiles:
+  - {fileID: 8300000, guid: f6f908ac284ac004db8e38edbf944e65, type: 3}
+  - {fileID: 8300000, guid: 46f72e6fc11557b4eb227f7fdbaa5e56, type: 3}
+  - {fileID: 8300000, guid: 0db9b65d6796b654ca7fc21daa89cec2, type: 3}
+  - {fileID: 8300000, guid: 5fa0376b8fd6bd847bde03b0f69bfd44, type: 3}
+  - {fileID: 8300000, guid: f617a7839b0a4754a897ad4378d95032, type: 3}
+  - {fileID: 8300000, guid: 5b3f7ecefdbc7514aab4f5cfa79db4fa, type: 3}
+  - {fileID: 8300000, guid: a9fef387784143b4db2b4288c069befd, type: 3}
+  - {fileID: 8300000, guid: 00c503a20ea998f459a510a15b1d616f, type: 3}
+  - {fileID: 8300000, guid: a4c0e87305bed674e8a4ff45b245889d, type: 3}
+  - {fileID: 8300000, guid: eca3eb0819226ac478eeb4f0595f692f, type: 3}
+  - {fileID: 8300000, guid: 2c6bb6f7b684eb54199983c40ea62e77, type: 3}
+  - {fileID: 8300000, guid: 61d25bc7d31667343865287f6b085548, type: 3}
+  - {fileID: 8300000, guid: 0bd923fb212d0f741a22251180db329e, type: 3}
+  - {fileID: 8300000, guid: cd6dc2c802c9db8408a0f422d3c7d20b, type: 3}
+  - {fileID: 8300000, guid: 3c83d4c6c103e974780b8d21b7a323e1, type: 3}
+  - {fileID: 8300000, guid: 5d2928466b47c1645a7316ff7f6a5a12, type: 3}
+  - {fileID: 8300000, guid: c6b2dc144652e544ab598cdb8f5bf985, type: 3}
+  - {fileID: 8300000, guid: cd9dacaad7196384bbfc88bae124a213, type: 3}
+  - {fileID: 8300000, guid: e2b61e1fe4657f34ca312ae616dbf21e, type: 3}
+  - {fileID: 8300000, guid: c54227aeb69b5be4199e46ef38cd9241, type: 3}
+  - {fileID: 8300000, guid: 612818be0aaa82e44abe5d662a541e55, type: 3}
+  - {fileID: 8300000, guid: f37e7fe01a6257744af0b93d3f55ca1b, type: 3}
+  - {fileID: 8300000, guid: 2e4bbb54f1a6e4a49a342e06eb42bd03, type: 3}
+  - {fileID: 8300000, guid: c555f7ef611367540b9b093da08d964c, type: 3}
+  - {fileID: 8300000, guid: e280e79f013bc0145a629c3248d5cdca, type: 3}
+  SoundLoader: {fileID: 11432190, guid: 99210f3207d7ec941b5e4e8fdae0ecd6, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

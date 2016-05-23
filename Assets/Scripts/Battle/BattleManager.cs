@@ -73,12 +73,21 @@ public class BattleManager : MonoBehaviour {
         //If the Enemy is below 0 Health
         else if (enemyRock.GetComponent<Battle_Rock_Enemy>().CurrentHealth <= 0 && playerRock.GetComponent<Battle_Rock_Player>().CurrentHealth > 0)
         {
+            _GameManager.instance.cashCurrency += enemyRock.GetComponent<Battle_Rock_Enemy>().currencyWorth;
             hasWon = true;
             GameOn = false;
+
+            if(_GameManager.instance.unlockedLevels[_GameManager.instance.noUnlockedLevels + 1] == 0)
+            {
+                _GameManager.instance.noUnlockedLevels++;
+                _GameManager.instance.unlockedLevels[_GameManager.instance.noUnlockedLevels] = 1;
+
+            }
         }
         //If both Enemy and Player reached 0 health or below at the same time
         else if(playerRock.GetComponent<Battle_Rock_Player>().CurrentHealth <= 0 && enemyRock.GetComponent<Battle_Rock_Enemy>().CurrentHealth <= 0)
         {
+            _GameManager.instance.cashCurrency += (enemyRock.GetComponent<Battle_Rock_Enemy>().currencyWorth) / 2;
             isTie = true;
             GameOn = false;
         }
@@ -106,7 +115,7 @@ public class BattleManager : MonoBehaviour {
         }
 
         badTempBool = true;
-        GameObject.Find("FadeScreen").GetComponent<SceneFadeInAndOut>().LoadNewScene("MenuMain");
+        GameObject.Find("FadeScreen").GetComponent<SceneFadeInAndOut>().LoadNewScene("Level_Selection");
 
     }
 

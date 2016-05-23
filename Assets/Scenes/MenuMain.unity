@@ -228,7 +228,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Battle Scene_Level1
+          m_StringArgument: Level_Selection
           m_BoolArgument: 0
         m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -479,6 +479,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11401590, guid: 1af11a37c39d2455ab291df2991812f0, type: 2}
+      propertyPath: unlockedLevels.Array.size
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 425604, guid: 1af11a37c39d2455ab291df2991812f0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0

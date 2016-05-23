@@ -10,25 +10,23 @@ public class Battle_Rock_Player : Base_Rock {
 
     public Text playerHealthText;
 
-	private float slotAttack, slotDefence, slotSpeed, slotLuck, slotHealth;
-
 	public float SlotDefence{ get { return slotDefence; }}
 	public float SlotSpeed { get { return slotSpeed; }}
 
     // Use this for initialization
     public void Start ()
     {
-        maxHealth = 50;
+        GetSlotStatTotals();
+
+        maxHealth = 50 + slotHealth;
         currentHealth = maxHealth;
-        attack = 15;
-        defense = 5;
-        speed = 2;
-        luck = 1;
+        attack = 15 + slotAttack;
+        defense = 5 + slotDefence;
+        speed = 2 + slotSpeed;
+        luck = 1 + slotLuck;
 
         healthBar.maxValue = maxHealth;
         healthBar.value = maxHealth;
-
-		GetSlotStatTotals ();
     }
 
 	
@@ -44,8 +42,8 @@ public void Combat()
         System.Random battleRandomizer = new System.Random();
         float battleRan = battleRandomizer.Next(-10, 10);
 
-		finalDamageOutput = ((attack+slotAttack) - enemyRock.GetComponent<Battle_Rock_Enemy>().Defense) * 
-			((speed+slotSpeed) / enemyRock.GetComponent<Battle_Rock_Enemy>().Speed) + (luck + slotLuck) + battleRan;
+		finalDamageOutput = (attack - enemyRock.GetComponent<Battle_Rock_Enemy>().Defense) * 
+			(speed / enemyRock.GetComponent<Battle_Rock_Enemy>().Speed) + luck + battleRan;
     }
 
     //Subtracts Enemies Total Damage from current health

@@ -340,6 +340,61 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 6e402ac96913b36439968ac67729ff19, type: 3}
   - {fileID: 21300000, guid: fa94b3ec98714d34c895bfbdf6887d1d, type: 3}
+--- !u!1001 &433987980
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 444538, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444538, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444538, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 444538, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444538, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444538, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444538, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444538, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260670, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260670, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430278, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+      propertyPath: SoundLoader
+      value: 
+      objectReference: {fileID: 11432190, guid: 99210f3207d7ec941b5e4e8fdae0ecd6,
+        type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e2abf2e2d89d1c5428ef4c2e9a32fcb3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &523449756
 GameObject:
   m_ObjectHideFlags: 0

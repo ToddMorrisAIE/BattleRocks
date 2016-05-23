@@ -10,6 +10,8 @@ public class Battle_Rock_Enemy : Base_Rock {
 
     public Text enemyHealthText;
 
+    private int enemyLevel = 1;
+
 
     // Use this for initialization
     public void Start ()
@@ -17,11 +19,14 @@ public class Battle_Rock_Enemy : Base_Rock {
 
         currencyWorth = 200;
 
-        maxHealth = 50;
+        GetSlotStatTotals();
+
+        maxHealth = 50 + slotHealth;
         currentHealth = maxHealth;
-        attack = 15;
-        defense = 5;
-        speed = 2;
+        attack = 15 + slotAttack;
+        defense = 5 + slotDefence;
+        speed = 2 + slotSpeed;
+        luck = 1 + slotLuck;
 
         healthBar.maxValue = maxHealth;
         healthBar.value = maxHealth;
@@ -46,5 +51,37 @@ public class Battle_Rock_Enemy : Base_Rock {
     public void ResolveCombat()
     {
         this.CurrentHealth -= playerRock.GetComponent<Battle_Rock_Player>().Damage;
+    }
+
+    private void GetSlotStatTotals()
+    {
+        
+
+        //Weapon Left
+        slotAttack =+ GameItems.gameItems[2].Attack;
+        slotDefence =+ GameItems.gameItems[2].Defence;
+        slotSpeed =+ GameItems.gameItems[2].Speed;
+        slotLuck =+ GameItems.gameItems[2].Luck;
+        slotHealth =+ GameItems.gameItems[2].Health;
+
+        //Weapon Right
+
+        //Eyes
+        slotAttack = +GameItems.gameItems[25].Attack;
+        slotDefence = +GameItems.gameItems[25].Defence;
+        slotSpeed = +GameItems.gameItems[25].Speed;
+        slotLuck = +GameItems.gameItems[25].Luck;
+        slotHealth = +GameItems.gameItems[25].Health;
+
+        //Mouth
+        slotAttack = +GameItems.gameItems[20].Attack;
+        slotDefence = +GameItems.gameItems[20].Defence;
+        slotSpeed = +GameItems.gameItems[20].Speed;
+        slotLuck = +GameItems.gameItems[20].Luck;
+        slotHealth = +GameItems.gameItems[20].Health;
+
+        //Head
+        
+
     }
 }

@@ -320,6 +320,18 @@ public class Inventory : MonoBehaviour
 		}
 
 	}
+
+    public InventoryItem GetItemInfo(int ItemIndex)
+    {
+        if (ItemIndex >= 0 && ItemIndex < numStock.Length)
+        {
+            return GameItems.gameItems[ItemIndex];
+        }
+        else
+        {
+            return GameItems.gameItems[0];
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()

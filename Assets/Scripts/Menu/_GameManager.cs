@@ -44,6 +44,8 @@ public class _GameManager : MonoBehaviour
     public int cashCurrency;
     public string lastLevelPlayed;                                // - Stores last level played.  
 
+    public int noUnlockedLevels;
+
     // Audio Variables. 
     public bool soundOn = true;
     public bool musicOn = true;
@@ -57,6 +59,11 @@ public class _GameManager : MonoBehaviour
         0,  // [3] level 3
         0,  // [4] level 4
         0,  // [5] level 5
+        0,  // [6] level 6
+        0,  // [7] level 7 
+        0,  // [8] level 8
+        0,  // [9] level 9
+        0  // [10] level 10
 
         // NOTE: ADD NEW INDEXES AS WE ADD LEVELS.
     };
@@ -82,6 +89,8 @@ public class _GameManager : MonoBehaviour
         // For Testing
         playerName = "Michael";                                 
         currentLives = 10;
+
+        noUnlockedLevels = 1;
 
     }
     // ---------------------------- UPDATE ----------------------------
