@@ -138,7 +138,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 99fe5a612ff30b24baf9227cc47f4228, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -225,10 +225,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 78948937}
---- !u!1 &156036071 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 148876, guid: d8833fa2099e4479b8f214d1df0e257b, type: 2}
-  m_PrefabInternal: {fileID: 596035047}
 --- !u!1 &212949378
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +903,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8833fa2099e4479b8f214d1df0e257b, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &596035048 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 415834, guid: d8833fa2099e4479b8f214d1df0e257b, type: 2}
+  m_PrefabInternal: {fileID: 596035047}
 --- !u!1 &870891047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,11 +1822,11 @@ Prefab:
     - target: {fileID: 11435688, guid: 3b221def5542a4342a314a98e02c62f7, type: 2}
       propertyPath: playerRock
       value: 
-      objectReference: {fileID: 156036071}
+      objectReference: {fileID: 0}
     - target: {fileID: 11435688, guid: 3b221def5542a4342a314a98e02c62f7, type: 2}
       propertyPath: enemyRock
       value: 
-      objectReference: {fileID: 1819518202}
+      objectReference: {fileID: 0}
     - target: {fileID: 422986, guid: 3b221def5542a4342a314a98e02c62f7, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1858,7 +1858,7 @@ Prefab:
     - target: {fileID: 11435688, guid: 3b221def5542a4342a314a98e02c62f7, type: 2}
       propertyPath: potManager
       value: 
-      objectReference: {fileID: 2028434060}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b221def5542a4342a314a98e02c62f7, type: 2}
   m_IsPrefabParent: 0
@@ -1995,10 +1995,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1769368203}
---- !u!1 &1819518202 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 131914, guid: d8833fa2099e4479b8f214d1df0e257b, type: 2}
-  m_PrefabInternal: {fileID: 596035047}
 --- !u!1 &1858558447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,7 +2135,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 2028434061}
+  - {fileID: 596035048}
   - {fileID: 2095110310}
   - {fileID: 537026558}
   - {fileID: 78948938}
@@ -2152,14 +2148,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &2028434060 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 165812, guid: d8833fa2099e4479b8f214d1df0e257b, type: 2}
-  m_PrefabInternal: {fileID: 596035047}
---- !u!4 &2028434061 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 470838, guid: d8833fa2099e4479b8f214d1df0e257b, type: 2}
-  m_PrefabInternal: {fileID: 596035047}
 --- !u!1 &2095110309
 GameObject:
   m_ObjectHideFlags: 0

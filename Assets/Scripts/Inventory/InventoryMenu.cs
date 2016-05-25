@@ -79,9 +79,9 @@ public class InventoryMenu : MonoBehaviour
 			"\t|\tEquipped : " + inventoryRef.NumEquipped (inventoryRef.GetInventoryItem (itemMenu.SelectedToggle)) + "\n";
 
 			text += "\nAttack : \t\t+" + item.Attack;
-			text += "\nDefence : \t+" + item.Defence;
+			text += "\nDefence : \t\t+" + item.Defence;
 			text += "\nSpeed : \t\t+" + item.Speed;
-			text += "\nLuck : \t\t+" + item.Luck;
+			text += "\nLuck : \t\t\t+" + item.Luck;
 			text += "\nHealth : \t\t+" + item.Health;
 		}
 

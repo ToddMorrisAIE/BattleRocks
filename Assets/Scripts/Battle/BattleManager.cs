@@ -49,23 +49,23 @@ public class BattleManager : MonoBehaviour {
         }
         
 	}
-    IEnumerator MyMethod() 
+    IEnumerator PotDropAnimationTimer() 
     {
+
+        if (GameOn == false)
+        {
+            yield return new WaitForSeconds(0);
+        }
         Debug.Log("Before Waiting 1 seconds");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3.5f);
+
+        Debug.Log("After Waiting 1 seconds");
+        //Checks for Win/Lose/Tie, if none, Initiate Combat
         playerRock.GetComponent<Battle_Rock_Player>().Combat();
         enemyRock.GetComponent<Battle_Rock_Enemy>().Combat();
 
         playerRock.GetComponent<Battle_Rock_Player>().ResolveCombat();
         enemyRock.GetComponent<Battle_Rock_Enemy>().ResolveCombat();
-        Debug.Log("After Waiting 1 seconds");
-        if (GameOn)
-        {
-            potManager.GetComponent<PotMovement>().potMove = true;
-            //return;
-        }
-        //Checks for Win/Lose/Tie, if none, Initiate Combat
-
         
         //If the Player has below 0 Health
         if (playerRock.GetComponent<Battle_Rock_Player>().CurrentHealth <= 0 && enemyRock.GetComponent<Battle_Rock_Enemy>().CurrentHealth > 0)
@@ -95,14 +95,15 @@ public class BattleManager : MonoBehaviour {
             GameOn = false;
         }
         potManager.GetComponent<PotMovement>().potMove = true;
-
     }
 
     //When the Battle button is clicked, this Function is called
     public void BeginFight()
     {
         potManager.GetComponent<PotMovement>().potMove = true;
-        StartCoroutine("MyMethod");
+        StartCoroutine("PotDropAnimationTimer");
+
+
     }
 
     //Displays Text on Screen depending on the Winner
